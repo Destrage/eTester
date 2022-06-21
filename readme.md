@@ -18,4 +18,4 @@ npm test
 ```
 ### To start the test and to generate a report under ./reports
 ```sh 
-npm run mochawesome-report`
+npm run mochawesome-report
