@@ -8,5 +8,5 @@ const importTest = (name, path) => {
 
 describe("Test Execution Started", () => {
     importTest(data.CREATE_USER.NAME, './scripts/users/create/index');
-    importTest("Second Script", './scripts/users/get/index');
+    importTest(data.GET_ALL_USERS.NAME, './scripts/users/get/index');
 });

@@ -13,13 +13,13 @@ const payload = {
 
 describe(data.DESCRIBE, () => {
     const baseurl = config.HOST;
-    it(data.SUB, (done) => {
+    it(data.SUB, done => {
         request(baseurl)
             .put(data.PATH)
             .send(payload)
             .set(data.TEST_DATA.REQUEST_HEADERS)
             .set(config.AUTH_HEADER)
-            .end(function (err, res) {
+            .end((err, res) => {
                 // Change according to your validations
                 let body = res.body;
                 expect(body.message, data.EXPECTED_RESULT.RESPONSE_MESSAGE);

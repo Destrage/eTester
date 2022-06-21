@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha",
-    "report": "mocha --reporter mochawesome"
+    "test": "mocha --timeout 7000",
+    "report": "mocha --report mochawesome --timeout 7000"
   },
   "keywords": [],
   "author": "Evan Victor Paul",
