@@ -16,6 +16,6 @@ npm i
 ```sh 
 npm test
 ```
-### To start the test and to generate a report under ./reports
+### To start the test and to generate a report under ./mochawesome-report
 ```sh 
-npm run mochawesome-report
+npm run report
