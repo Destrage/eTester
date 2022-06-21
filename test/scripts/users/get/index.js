@@ -15,15 +15,12 @@ describe(data.DESCRIBE, () => {
             .set(config.AUTH_HEADER)
             .end(function (err, res) {
 
-                let body = res.text;
-                let isValidBody = util.isValidJSON(body);
-
-                expect(isValidBody, true);
-                body = JSON.parse(body);
-
-                expect(Array.isArray(body.data), true);
                 expect(res.statusCode).to.be.equal(data.EXPECTED_RESULT.RESPONSE_STATUS_CODE);
+                let body = res.body;
+                expect(Array.isArray(body.data), true);
+                expect(body.status, data.EXPECTED_RESULT.RESPONSE_STATUS_CODE);
                 done();
+                
             });
     });
 });

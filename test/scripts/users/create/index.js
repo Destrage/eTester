@@ -21,11 +21,7 @@ describe(data.DESCRIBE, () => {
             .set(config.AUTH_HEADER)
             .end(function (err, res) {
                 // Change according to your validations
-                let body = res.text;
-                let isValidBody = util.isValidJSON(body);
-                
-                expect(isValidBody, true);
-                body = JSON.parse(body);
+                let body = res.body;
                 expect(body.message, data.EXPECTED_RESULT.RESPONSE_MESSAGE);
                 expect(res.statusCode).to.be.equal(data.EXPECTED_RESULT.RESPONSE_STATUS_CODE);
                 done();
